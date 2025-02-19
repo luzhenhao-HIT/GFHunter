@@ -50,7 +50,7 @@ Note: the annotation only support GENCODE currently.
 GFHunter.py detect <readfile.fa/fq> <indexdir>
 ```
 | Parameter | Description | Default |
-|-----:|---------------|-----|
+|-----|---------------|-----|
 |--middlefile|Middle file directory|./middlefile/|
 |--output|Output result name|./result|
 |--print_middle_output|Save the middle file after detection|NULL|
