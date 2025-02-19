@@ -1,4 +1,4 @@
-# GFHunter: A Computational Framework for Precision Detection of Gene Fusions in Long-Read Cancer Transcriptomes
+# GFHunter: versatile computational framework for gene fusion detection in long-read cancer transcriptomes
 ## Overview
 - [Introduction](#introduction)
 - [Dependence](#dependence)
