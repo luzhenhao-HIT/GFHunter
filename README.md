@@ -3,11 +3,7 @@
 - [Introduction](#introduction)
 - [Dependence](#dependence)
 - [Installation](#installation)
-  - [Install by conda](#install-by-conda)
-  - [Install by pip](#install-by-pip)
 - [Usage](#usage)
-  - [Index](#index)
-  - [Detection](#detection)
 - [Citation](#citation)
 - [Contact](#contact)
 
