@@ -1,5 +1,15 @@
 # GFHunter: A Computational Framework for Precision Detection of Gene Fusions in Long-Read Cancer Transcriptomes
 ## Overview
+- [Introduction](#introduction)
+- [Dependence](#dependence)
+- [Installation](#installation)
+  - [Install by conda](#install-by-conda)
+  - [Install by pip](#install-by-pip)
+- [Usage](#usage)
+  - [Index](#index)
+  - [Detection](#detection)
+- [Citation](#citation)
+- [Contact](#contact)
 
 ## Introduction
 - **GFHunter** is a long read sequence transcriptome alignment-based fusion genes detection tool.
