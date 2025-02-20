@@ -8,27 +8,19 @@ import os
 path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class Result():
-    def __init__(self, g1, g2, bp1, bp2):
+    def __init__(self, g1, g2):
         self.g1 = g1
         self.g2 = g2
-        self.bp1 = bp1
-        self.bp2 = bp2
         self.key = False
         pass
 
 class GeneFuison():
-    def __init__(self, g1, g2, bp1, bp2, num):
+    def __init__(self, g1, g2, num):
         self.g1 = g1
         self.g2 = g2
-        self.bp1s = [bp1,]
-        self.bp2s = [bp2,]
+        self.num = num
         self.key = False
         self.bpkey = False
-        self.num = num
-        pass
-    def add_bp(self, bp1, bp2):
-        self.bp1s.append(bp1)
-        self.bp2s.append(bp2)
         pass
 
 def create_key(a, b):
@@ -38,21 +30,17 @@ def create_key(a, b):
     return key
 
 def read_result(depth):
-    file = open(path + '/result/All-Simulation/result' + str(depth) + 'x.txt')
+    file = open(path + '/result/All-Simulation/simulation_result.tsv')
+    line = file.readline()
     line = file.readline()
     result = {}
     while line:
-        if '>' in line:
-            line = file.readline()
-            gene1 = line.split('\t')[1]
-            breakpoint1 = int(line.split('\t')[9])
-            line = file.readline()
-            gene2 = line.split('\t')[1]
-            breakpoint2 = int(line.split('\t')[9])
-            line = file.readline()
-            r = Result(gene1, gene2, breakpoint1, breakpoint2)
-            key = create_key(gene1, gene2)
-            result[key] = r
+        gene1 = line.split('\t')[0]
+        gene2 = line.split('\t')[1]
+        line = file.readline()
+        r = Result(gene1, gene2)
+        key = create_key(gene1, gene2)
+        result[key] = r
     return result
 
 def read_GFHunter(depth, tp, n):
@@ -64,22 +52,16 @@ def read_GFHunter(depth, tp, n):
     while line:
         g1 = line.split('\t')[0]
         g2 = line.split('\t')[1]
-        bp1 = int(line.split('\t')[4].split('; ')[0].split(':')[1])
-        bp2 = int(line.split('\t')[4].split('; ')[1].split(':')[1])
         key = create_key(g1, g2)
         num = int(line.split('\t')[7])
         if num >= n:
             if 'flag = 5' in line:
-                if key in genefusion_exact.keys():
-                    genefusion_exact[key].add_bp(bp1, bp2)
-                else:
-                    genefusion_exact[key] = GeneFuison(g1, g2, bp1, bp2, num)
+                if key not in genefusion_exact.keys():
+                    genefusion_exact[key] = GeneFuison(g1, g2, num)
 
             if 'flag = 5' in line or 'flag = 4' in line:
-                if key in genefusion_approximate.keys():
-                    genefusion_approximate[key].add_bp(bp1, bp2)
-                else:
-                    genefusion_approximate[key] = GeneFuison(g1, g2, bp1, bp2, num)
+                if key not in genefusion_approximate.keys():
+                    genefusion_approximate[key] = GeneFuison(g1, g2, num)
 
         line = file.readline()
     return (genefusion_approximate, genefusion_exact)
@@ -92,10 +74,8 @@ def read_LongGF(depth, tp):
         if 'SumGF' in line:
             g1 = line.split('\t')[1].split(' ')[0].split(':')[0]
             g2 = line.split('\t')[1].split(' ')[0].split(':')[1]
-            bp1 = int(line.split('\t')[1].split(' ')[2].split(':')[1])
-            bp2 = int(line.split('\t')[1].split(' ')[3].split('\n')[0].split(':')[1])
             key = create_key(g1, g2)
-            longgf[key] = GeneFuison(g1, g2, bp1, bp2, 0)
+            longgf[key] = GeneFuison(g1, g2, 0)
         line = file.readline()
     return longgf
 
@@ -108,11 +88,9 @@ def read_JAFFAL(depth, tp):
         if 'Confidence' in line:
             g1 = line.split(',')[1].split(':')[0]
             g2 = line.split(',')[1].split(':')[1]
-            bp1 = int(line.split(',')[3])
-            bp2 = int(line.split(',')[6])
             key = create_key(g1, g2)
             #print(key)
-            jaffal[key] = GeneFuison(g1, g2, bp1, bp2, 0)
+            jaffal[key] = GeneFuison(g1, g2, 0)
         line = file.readline()
     return jaffal
 
@@ -124,11 +102,9 @@ def read_fusionseeker(depth, tp):
     while line:
         g1 = line.split('\t')[1]
         g2 = line.split('\t')[2]
-        bp1 = int(line.split('\t')[5])
-        bp2 = int(line.split('\t')[7])
         key = create_key(g1, g2)
         #print(key)
-        jaffal[key] = GeneFuison(g1, g2, bp1, bp2, 0)
+        jaffal[key] = GeneFuison(g1, g2, 0)
         line = file.readline()
     return jaffal
 
@@ -139,11 +115,9 @@ def read_Genion(depth, tp):
     while line:
         g1 = line.split('\t')[1].split('::')[0]
         g2 = line.split('\t')[1].split('::')[1]
-        bp1 = 0
-        bp2 = 0
         key = create_key(g1, g2)
         #print(key)
-        jaffal[key] = GeneFuison(g1, g2, bp1, bp2, 0)
+        jaffal[key] = GeneFuison(g1, g2, 0)
         line = file.readline()
     return jaffal
 
