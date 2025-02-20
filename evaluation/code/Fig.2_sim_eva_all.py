@@ -38,7 +38,7 @@ def create_key(a, b):
     return key
 
 def read_result(depth):
-    file = open(path + '/result/All-Simualtion/result' + str(depth) + 'x.txt')
+    file = open(path + '/result/All-Simulation/result' + str(depth) + 'x.txt')
     line = file.readline()
     result = {}
     while line:
@@ -56,7 +56,7 @@ def read_result(depth):
     return result
 
 def read_GFHunter(depth, tp, n):
-    file = open(path + '/result/All-Simualtion/' + tp + str(depth) + 'x/GFHunter.csv')
+    file = open(path + '/result/All-Simulation/' + tp + str(depth) + 'x/GFHunter.csv')
     line = file.readline()
     line = file.readline()
     genefusion_exact = {}
@@ -85,7 +85,7 @@ def read_GFHunter(depth, tp, n):
     return (genefusion_approximate, genefusion_exact)
 
 def read_LongGF(depth, tp):
-    file = open(path + '/result/All-Simualtion/' + tp + str(depth) + 'x/LongGF.log')
+    file = open(path + '/result/All-Simulation/' + tp + str(depth) + 'x/LongGF.log')
     line = file.readline()
     longgf = {}
     while line:
@@ -100,7 +100,7 @@ def read_LongGF(depth, tp):
     return longgf
 
 def read_JAFFAL(depth, tp):
-    file = open(path + '/result/All-Simualtion/' + tp + str(depth) + 'x/JAFFAL.csv')
+    file = open(path + '/result/All-Simulation/' + tp + str(depth) + 'x/JAFFAL.csv')
     line = file.readline()
     line = file.readline()
     jaffal = {}
@@ -117,7 +117,7 @@ def read_JAFFAL(depth, tp):
     return jaffal
 
 def read_fusionseeker(depth, tp):
-    file = open(path + '/result/All-Simualtion/' + tp + str(depth) + 'x/fusionseeker.txt')
+    file = open(path + '/result/All-Simulation/' + tp + str(depth) + 'x/fusionseeker.txt')
     line = file.readline()
     line = file.readline()
     jaffal = {}
@@ -133,7 +133,7 @@ def read_fusionseeker(depth, tp):
     return jaffal
 
 def read_Genion(depth, tp):
-    file = open(path + '/result/All-Simualtion/' + tp + str(depth) + 'x/Genion.tsv')
+    file = open(path + '/result/All-Simulation/' + tp + str(depth) + 'x/Genion.tsv')
     line = file.readline()
     jaffal = {}
     while line:

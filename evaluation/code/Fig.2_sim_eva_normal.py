@@ -43,7 +43,7 @@ def read_result(depth):
 
 def read_GFHunter(depth, tp, n):
     #print(tp)
-    file = open(path + '/result/All-Simualtion/Nagetive/GFHunter_' + tp + str(depth) + 'x.csv')
+    file = open(path + '/result/All-Simulation/Nagetive/GFHunter_' + tp + str(depth) + 'x.csv')
     line = file.readline()
     line = file.readline()
     genefusion_exact = {}
@@ -73,7 +73,7 @@ def read_GFHunter(depth, tp, n):
     return (genefusion_approximate, genefusion_exact)
 
 def read_LongGF(depth, tp):
-    file = open(path + '/result/All-Simualtion/Nagetive/LongGF_' + tp + str(depth) + 'x.log')
+    file = open(path + '/result/All-Simulation/Nagetive/LongGF_' + tp + str(depth) + 'x.log')
     line = file.readline()
     longgf = {}
     while line:
@@ -114,7 +114,7 @@ def read_JAFFAL(depth, tp):
     return (jaffal, jaffal_HC)
 
 def read_fusionseeker(depth, tp):
-    file = open(path + '/result/All-Simualtion/Nagetive/fusionseeker_' + tp + str(depth) + 'x.txt')
+    file = open(path + '/result/All-Simulation/Nagetive/fusionseeker_' + tp + str(depth) + 'x.txt')
     line = file.readline()
     line = file.readline()
     jaffal = {}
@@ -134,7 +134,7 @@ def read_fusionseeker(depth, tp):
     return jaffal
 
 def read_Genion(depth, tp):
-    file = open(path + '/result/All-Simualtion/Nagetive/Genion_' + tp + str(depth) + 'x.tsv')
+    file = open(path + '/result/All-Simulation/Nagetive/Genion_' + tp + str(depth) + 'x.tsv')
     line = file.readline()
     jaffal = {}
     over = {}
