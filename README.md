@@ -31,7 +31,14 @@ conda
 ```
 ### Install by pip
 ```
-pip
+#install minimap2
+
+git clone https://github.com/lh3/minimap2
+cd minimap2 && make
+
+#install GFHunter
+
+pip install GFHunter
 ```
 ## Usage
 GFHunter offers 2 steps to detect fusions: **index** and **detect**
