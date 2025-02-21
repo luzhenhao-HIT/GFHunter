@@ -25,10 +25,6 @@
 6. pyabpoa =1.5.2
 ```
 ## Installation
-### Install by conda
-```
-conda
-```
 ### Install by pip
 ```
 #install minimap2
