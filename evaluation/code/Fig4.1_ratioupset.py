@@ -9,7 +9,7 @@ if not os.path.exists(outputdir):
 
 def read_result():
     results = []
-    file = open(path + '/result/gencode.v47.chr_patch_hapl_scaff.annotation.gtf')
+    file = open(path + '/result/gencode.v47.annotation.gtf')
     line = file.readline()
     while line:
         if '\tgene\t' in line:
