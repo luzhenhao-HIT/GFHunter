@@ -30,4 +30,8 @@ evaluation
     │  └─Table 1
     └─SKBR-3
 ```
-- Note: user should download
+- Note: user should download an annotation from genecode as follow.
+```
+cd result
+wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
+```
