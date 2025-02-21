@@ -18,7 +18,7 @@
 ## Dependence
 ```
 1. python >=3
-2. minimap2 =2.22
+2. minimap2 >=2.22
 3. intervaltree =3.1.0
 4. numpy >=2.0.1
 5. scipy >=1.14.0
