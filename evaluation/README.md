@@ -28,9 +28,10 @@ evaluation
     │  ├─Fig.4 a
     │  ├─Fig.4 b
     │  └─Table 1
-    └─SKBR-3
+    ├─SKBR-3
+    └─gencode.v47.annotation.gtf # not in github
 ```
-- Note: user should download an annotation from genecode as follow.
+- Note: user should download an annotation: gencode.v47.annotation.gtf from genecode as follow.
 ```
 cd result
 wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_47/gencode.v47.annotation.gtf.gz
