@@ -105,5 +105,7 @@ options:
 |--overlap_precent|precent of overlap between reads and transcripts|0.5|
 |--min_clustering_length|minimum distance between two cluster|200|
 |--least_support_reads|least reads number to support gene fusions|2|
+### Note
+- GFHunter only support **GENCODE annotation** at present.
 ## Citation
 ## Contact
