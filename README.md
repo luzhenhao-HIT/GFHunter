@@ -107,6 +107,6 @@ options:
 |--least_support_reads|least reads number to support gene fusions|2|
 ### Note
 - GFHunter only support **GENCODE annotation** at present.
-- User can dowload a pre-prepared index from https://drive.google.com/drive/folders/1XsC0GBfF6-3aVVKZstBQYWoTtCwPTbc3?usp=drive_link.
+- User can dowload a pre-prepared index from https://drive.google.com/file/d/1UuWu0bVQm7lUh7AxVyQDC5zFQe37iOHv/view?usp=drive_link.
 ## Citation
 ## Contact
