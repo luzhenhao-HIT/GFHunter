@@ -25,12 +25,12 @@
 6. pyabpoa =1.5.2
 ```
 ## Installation
-### Install by pip
 ```
 #install minimap2
 
-git clone https://github.com/lh3/minimap2
-cd minimap2 && make
+conda create -n GFHunter python=3.8
+conda activate GFHunter
+conda install bioconda::minimap2
 
 #install GFHunter
 
