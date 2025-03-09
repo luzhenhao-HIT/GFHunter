@@ -23,6 +23,7 @@
 4. numpy >=2.0.1
 5. scipy >=1.14.0
 6. pyabpoa =1.5.2
+7. gcc >=6.4.0
 ```
 ## Installation
 ```
@@ -39,7 +40,7 @@ pip install GFHunter
 ## Usage
 GFHunter offers 2 steps to detect fusions: **index** and **detect**
 ```
-GFHunter.py [-h] {index,detect} ...
+GFHunter [-h] {index,detect} ...
 
 positional arguments:
   {index,detect}
