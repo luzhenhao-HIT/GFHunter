@@ -40,15 +40,16 @@ pip install GFHunter
 ## Usage
 GFHunter offers 2 steps to detect fusions: **index** and **detect**
 ```
-GFHunter [-h] {index,detect} ...
+usage: GFHunter [-h] {index,detect,sc} ...
 
 positional arguments:
-  {index,detect}
-    index         Create index of the GFHunter
-    detect        Dectect gene fusions
+  {index,detect,sc}
+    index            Create index of the GFHunter
+    detect           Dectect gene fusions
+    sc               Dectect gene fusions on single cell RNA-seq data
 
-options:
-  -h, --help      show this help message and exit
+optional arguments:
+  -h, --help         show this help message and exit
 ```
 ### Index
 ```
@@ -65,13 +66,13 @@ options:
 Note: the annotation only support GENCODE currently.
 ### Detection
 ```
-GFHunter detect [-h] [-o str] [-m dir] [-M] [-t int] [-T type] [-n int] [-e int] [-p float] [-c int] [-l int] <readfile> <indexdir>
+usage: GFHunter detect [-h] [-o str] [-m dir] [-M] [-t int] [-T type] [-n int] [-e int] [-p float] [-c int] [-l int] [-b int] [-C] <readfile> <indexdir>
 
 positional arguments:
   <readfile>            Read file (fasta/fastq)
   <indexdir>            Index directory
 
-options:
+optional arguments:
   -h, --help            show this help message and exit
   -o str, --output str  the name of fusion result (default = "./result")
   -m dir, --middlefile dir
@@ -81,8 +82,7 @@ options:
   -t int, --threads int
                         threads GFHunter used (default = 4)
   -T type, --trans_based_align_type type
-                        setting the transcriptome-based alignmnet type of minimap2: pb/hifi/ont/iclr - CLR/HiFi/Nanopore/ICLR vs reference mapping (default =
-                        ont)
+                        setting the transcriptome-based alignmnet type of minimap2: pb/hifi/ont/iclr - CLR/HiFi/Nanopore/ICLR vs reference mapping (default = ont)
   -n int, --min_read_length int
                         minimum length of reads (bp) considered (default = 50)
   -e int, --max_exon_boundary int
@@ -90,9 +90,12 @@ options:
   -p float, --overlap_precent float
                         precent of overlap between reads and transcripts (default = 0.5)
   -c int, --min_clustering_length int
-                        minimum length between two cluster (default = 200)
+                        minimum distance between two cluster (default = 200)
   -l int, --least_support_reads int
                         least reads number to support gene fusions (default = 2)
+  -b int, --max_breakpoint_distance int
+                        maximum distance between crossing refinement breakpoints and transcriptome based detection breakpoints (default = 200)
+  -C, --countine        countine detection)
 ```
 | Parameter | Description | Default |
 |-----|---------------|-----|
@@ -106,6 +109,41 @@ options:
 |--overlap_precent|precent of overlap between reads and transcripts|0.5|
 |--min_clustering_length|minimum distance between two cluster|200|
 |--least_support_reads|least reads number to support gene fusions|2|
+### Single-cell detection
+```
+usage: GFHunter sc [-h] [-o str] [-m dir] [-M] [-t int] [-T type] [-n int] [-e int] [-p float] [-c int] [-l int] [-L int] [-b int] [-C] <bamfile> <indexdir>
+
+positional arguments:
+  <bamfile>             Read file handled by wf-single-cell (bam)
+  <indexdir>            Index directory
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o str, --output str  the name of fusion result (default = "./result")
+  -m dir, --middlefile dir
+                        temporary folder of middle files (default = "./middlefile/")
+  -M, --print_middle_output
+                        retain the middle files in scion
+  -t int, --threads int
+                        threads GFHunter used (default = 4)
+  -T type, --trans_based_align_type type
+                        setting the transcriptome-based alignmnet type of minimap2: pb/hifi/ont/iclr - CLR/HiFi/Nanopore/ICLR vs reference mapping (default = ont)
+  -n int, --min_read_length int
+                        minimum length of reads (bp) considered (default = 50)
+  -e int, --max_exon_boundary int
+                        maximum length between breakpoint and exon boundary (default = 30)
+  -p float, --overlap_precent float
+                        precent of overlap between reads and transcripts (default = 0.5)
+  -c int, --min_clustering_length int
+                        minimum distance between two cluster (default = 200)
+  -l int, --least_support_reads int
+                        least reads number to support gene fusions (default = 2)
+  -L int, --least_support_cells int
+                        least cells number to support gene fusions (default = 5)
+  -b int, --max_breakpoint_distance int
+                        maximum distance between crossing refinement breakpoints and transcriptome based scion breakpoints (default = 200)
+  -C, --countine        countine detection
+```
 ### Note
 - GFHunter only support **GENCODE annotation** at present.
 - User can dowload a pre-prepared index from https://drive.google.com/file/d/1UuWu0bVQm7lUh7AxVyQDC5zFQe37iOHv/view?usp=drive_link.
