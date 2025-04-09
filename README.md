@@ -24,6 +24,7 @@
 5. scipy >=1.14.0
 6. pyabpoa =1.5.2
 7. gcc >=6.4.0
+8. pysam >= 0.23.0
 ```
 ## Installation
 ```
