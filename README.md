@@ -111,6 +111,7 @@ optional arguments:
 |--min_clustering_length|minimum distance between two cluster|200|
 |--least_support_reads|least reads number to support gene fusions|2|
 ### Single-cell detection
+If user want to detect fusions on single cell RNA-seq data, they should use wf-single-cell to preprocess the raw fastq. After the preprocess, use the tagged bam as input of GFHunter with the fuction "sc".
 ```
 usage: GFHunter sc [-h] [-o str] [-m dir] [-M] [-t int] [-T type] [-n int] [-e int] [-p float] [-c int] [-l int] [-L int] [-b int] [-C] <bamfile> <indexdir>
 
