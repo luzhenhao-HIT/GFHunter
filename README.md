@@ -1,4 +1,4 @@
-# GFHunter enables accurate and efficient detection of gene fusions in bulk and single-cell long-read cancer
+# GFHunter enables accurate and efficient detection of gene fusions in bulk and single-cell long-read cancer transcriptomes
 ## Overview
 - [Introduction](#introduction)
 - [Dependence](#dependence)
