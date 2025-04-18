@@ -10,7 +10,7 @@ if not os.path.exists(outputdir):
     os.makedirs(outputdir)
 
 K = 50
-d = {'PB' : 3, 'cDNA' : 8, 'dRNA' : 3}
+d = {'PB' : 5, 'cDNA' : 8, 'dRNA' : 3}
 
 class Result():
     def __init__(self, g1, g2, bp1, bp2):
