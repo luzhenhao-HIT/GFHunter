@@ -384,8 +384,9 @@ def check_breakpoints2(bp2, samline):
     return (bp, flag)
 
 
-def main(result_out, POA_file, result_file, index_dir, middlefile, thread, if_output, lreads):
-    global least_reads
+def main(result_out, POA_file, result_file, index_dir, middlefile, thread, if_output, lreads, bpsbp):
+    global least_reads, K
+    K = bpsbp
     least_reads = lreads
     fusions = read_result(result_file)
     results_of_each_fusion = alignment(POA_file, index_dir, middlefile, thread, if_output)

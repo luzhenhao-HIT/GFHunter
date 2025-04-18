@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='GFHunter',
-    version='1.0.0',
+    version='1.0.1',
     description=(
     	'GFHunter is a long read sequence transcriptome alignment-based fusion genes detection tool.'
     	 ),
@@ -27,6 +27,7 @@ setup(
     python_requires='>=3',
     install_requires=[
 		'numpy',
+        'pysam',
 		'scipy',
 		'intervaltree',
 		'pyabpoa'

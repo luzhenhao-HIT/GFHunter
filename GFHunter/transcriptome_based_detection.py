@@ -11,6 +11,7 @@ min_length = 50
 exon_boundary = 30
 overlap_present = 0.5
 clustering_num = 200
+sup_read_num = 2
 type_alignment = 'ont'
 sam_file = 'middlefile/step1.DNA_like_alignment.only_primary.sam'
 output_file_dir = 'middlefile/step1.gene_groups/'
@@ -230,7 +231,7 @@ class Read():
         poslist = []
         for samline in self.samlines:
             if samline.transcript != 0:                
-                if samline.start > samline.transcript.start + exon_boundary or samline.end < samline.transcript.end - exon_boundary:
+                if samline.start > samline.transcript.start + exon_boundary or samline.end < samline.transcript.end - exon_boundary: #?????
                     samlines.append(samline)
                 else:
                     self.read_through.append(samline)
@@ -268,6 +269,7 @@ class Genes_group():
         self.reads = reads
         pass
     def clustering(self):
+        global sup_read_num
         self.trees = {}
         self.leaves = {}
         self.flag = False
@@ -282,7 +284,7 @@ class Genes_group():
                     self.leaves[leaf.flag] = [leaf,]
                 n += 1
         for flag, leaves in self.leaves.items():
-            if len(leaves) >= 2:
+            if len(leaves) >= sup_read_num:
                 self.flag = True
                 self.trees[flag] = Cluster_tree(leaves, self.gene1, self.gene2, flag)
                 self.trees[flag].clustering() 
@@ -464,6 +466,7 @@ class Cluster_tree():
                 result.write(line1 + '\n')
         pass
     def classify(self, k):
+        global sup_read_num
         for i in range(len(self.nodes.keys())):
             n = len(self.nodes.keys()) - i - 1
             if_classify = True
@@ -471,7 +474,7 @@ class Cluster_tree():
                 if node.height > k:
                     if_classify = False
             if if_classify == True :
-                min = 2 
+                min = sup_read_num
                 nodelist = []
                 for node in self.nodes[n]:
                     if len(node.leaves) >= min:
@@ -572,14 +575,14 @@ Use minimap2 to align reads to rebuild transcripts and then index the result of 
 '''
 def read_sam_file(thread, ref_index, readfile,  output_sam, if_output, type_alignment):
     global reads, overlap_present
-    minimap2_view_process = subprocess_popen(shlex.split('minimap2 -ax map-{} -t {} {} {}'.format(type_alignment, str(thread), ref_index, readfile)))
+    minimap2_view_process = subprocess_popen(shlex.split('minimap2 -ax map-{} -t {} {} {} --secondary=no'.format(type_alignment, str(thread), ref_index, readfile)))
     old_id = ''
     n = 0
     with open(output_sam, 'w') as samfile:
         for line in minimap2_view_process.stdout:
             if if_output == True:
                 samfile.write(line)
-            if 'SA:' in line and '@' not in line:
+            if 'SA:' in line and line[0] != '@':
                 read_id = line.split('\t')[0]
                 read_flag = int(line.split('\t')[1])
                 if read_flag != 4 and read_flag != 256 and read_flag != 272:
@@ -601,6 +604,36 @@ def read_sam_file(thread, ref_index, readfile,  output_sam, if_output, type_alig
             reads.append(read)
     minimap2_view_process.stdout.close()
     minimap2_view_process.wait()
+
+def read_sam_file2(output_sam):
+    global reads, overlap_present
+    old_id = ''
+    n = 0
+    samfile = open(output_sam)
+    line = samfile.readline()
+    while line:
+        if 'SA:' in line and line[0] != '@':
+            read_id = line.split('\t')[0]
+            read_flag = int(line.split('\t')[1])
+            if read_flag != 4 and read_flag != 256 and read_flag != 272:
+                read_chr = line.split('\t')[2]
+                read_start = int(line.split('\t')[3])
+                read_cigar = line.split('\t')[5]
+                read_fasta = line.split('\t')[9]
+                if read_id != old_id:
+                    old_id = read_id
+                    n += 1
+                    if n > 1 and len(read.samlines) > 1: #filter3
+                        if read_to_transcript(read, overlap_present) == True:
+                            reads.append(read)
+                    read = Read(read_id, read_start, read_cigar, read_flag, read_chr, read_fasta)
+                else:
+                    read.add_samline(read_id, read_start, read_cigar, read_flag, read_chr, read_fasta)
+        line = samfile.readline()
+    if len(read.samlines) > 1:
+        if read_to_transcript(read, overlap_present) == True:
+            reads.append(read)
+    pass
 
 def read_to_transcript(read, precent):
     global index
@@ -873,12 +906,12 @@ input: annotation, ref_index, readfile, thread, if_output, link_tuple
 output: NULL
 Make sure the thread number is posible.
 '''
-def control_thread(annotation, ref_index, readfile, thread, if_output, link_tuple, cnums):
+def control_thread(annotation, ref_index, readfile, thread, if_output, link_tuple, cnums, if_countine):
     global index
     global reads
-    global min_length, exon_boundary, overlap_present, clustering_num
+    global min_length, exon_boundary, overlap_present, clustering_num, sup_read_num
     output_sam, output_file_dir, tree_dir, out_put, result_out = link_tuple
-    min_length, exon_boundary, overlap_present, clustering_num , type_alignment= cnums
+    min_length, exon_boundary, overlap_present, clustering_num , type_alignment, sup_read_num= cnums
     cpu = os.cpu_count()
     if cpu < thread:
         thread = cpu
@@ -892,7 +925,10 @@ def control_thread(annotation, ref_index, readfile, thread, if_output, link_tupl
     time1 = time.time()
     print('Transcriptome-based alignment')
     print('-' * 50)
-    read_sam_file(thread, ref_index, readfile, output_sam, if_output, type_alignment)
+    if if_countine == False:
+        read_sam_file(thread, ref_index, readfile, output_sam, if_output, type_alignment)
+    else:
+        read_sam_file2(output_sam)
     time2 = time.time()
     print('found ', len(reads), ' reads with genefusion')
     print('used ', time2 - time1, 's')
@@ -905,7 +941,7 @@ def control_thread(annotation, ref_index, readfile, thread, if_output, link_tupl
 '''
 fuction: main
 '''
-def main(readfile, index_dir, middlefile, thread, if_output, cnums):
+def main(readfile, index_dir, middlefile, thread, if_output, cnums, if_countine):
     annotation = index_dir + 'rebuild_annotation.txt'
     ref_index = index_dir + 'trans_index.mmi'
     output_sam = middlefile + 'step1.DNA_like_alignment.sam'
@@ -915,7 +951,7 @@ def main(readfile, index_dir, middlefile, thread, if_output, cnums):
     result_out = middlefile + 'step1.genefusion.csv'
     link_tuple = (output_sam, output_file_dir, tree_dir, out_put, result_out)
     time1 = time.time()
-    result_file, POA_file, groups = control_thread(annotation, ref_index, readfile, thread, if_output, link_tuple, cnums)
+    result_file, POA_file, groups = control_thread(annotation, ref_index, readfile, thread, if_output, link_tuple, cnums, if_countine)
     time2 = time.time()
     timeuse = time2 - time1
     print('Transcriptome-based detection totally used ' + str(timeuse) + 's')
