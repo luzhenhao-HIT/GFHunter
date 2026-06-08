@@ -15,4 +15,4 @@
 |12|MCF-7 dRNA|Real tumor cell line data|http://sg-nex-data.s3.amazonaws.com/data/sequencing_data_ont/fastq/SGNex_MCF7_directRNA_replicate1_run1/SGNex_MCF7_directRNA_replicate1_run1.fastq.gz<br>http://sg-nex-data.s3.amazonaws.com/data/sequencing_data_ont/fastq/SGNex_MCF7_directRNA_replicate2_run2/SGNex_MCF7_directRNA_replicate2_run2.fastq.gz<br>http://sg-nex-data.s3.amazonaws.com/data/sequencing_data_ont/fastq/SGNex_MCF7_directRNA_replicate2_run3/SGNex_MCF7_directRNA_replicate2_run3.fastq.gz<br>http://sg-nex-data.s3.amazonaws.com/data/sequencing_data_ont/fastq/SGNex_MCF7_directRNA_replicate3_run1/SGNex_MCF7_directRNA_replicate3_run1.fastq.gz<br>http://sg-nex-data.s3.amazonaws.com/data/sequencing_data_ont/fastq/SGNex_MCF7_directRNA_replicate4_run1/SGNex_MCF7_directRNA_replicate4_run1.fastq.gz|
 |13|MCF-7 Iso-seq|Real tumor cell line data|SRP055913|
 |14|LR_3CL_untargeted|Long read scRNA-seq mixed by SK-OV-3, COV504, IGROV-1|SRR25278596|
-|15|Fusion in CCLE|Fusion database|https://depmap.org/portal/|
+|15|Fusion in CCLE|Fusion database|https://depmap.org/portal/data_page/?tab=allData&releasename=DepMap%20Public%2026Q1&filename=OmicsFusionFiltered.csv|
