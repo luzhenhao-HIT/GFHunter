@@ -1,0 +1,270 @@
+/home/user/luzhenhao/HCT116_ONT/FusionSeeker/isoseq.bam ../data/gencode.v44.annotation.gtf 100 30 100
+Open sam file (/home/user/luzhenhao/HCT116_ONT/FusionSeeker/isoseq.bam).
+Read sam file (/home/user/luzhenhao/HCT116_ONT/FusionSeeker/isoseq.bam) for scanning multiple-mapped reads. 
+Handle =0 >> multi_map_reads.size=0 read_len_map.size=0 Time-elapsed=0
+Handle =2000000 >> multi_map_reads.size=101 read_len_map.size=853026 Time-elapsed=7.65
+Handle =4000000 >> multi_map_reads.size=181 read_len_map.size=2050008 Time-elapsed=20.45
+Handle =6000000 >> multi_map_reads.size=243 read_len_map.size=3401531 Time-elapsed=32.88
+Handle =8000000 >> multi_map_reads.size=323 read_len_map.size=4793711 Time-elapsed=46.42
+Handle =10000000 >> multi_map_reads.size=349 read_len_map.size=6048103 Time-elapsed=57.78
+Handle =12000000 >> multi_map_reads.size=383 read_len_map.size=7167111 Time-elapsed=67.71
+Handle =14000000 >> multi_map_reads.size=415 read_len_map.size=7586393 Time-elapsed=75.24
+Handle =16000000 >> multi_map_reads.size=442 read_len_map.size=8326889 Time-elapsed=82.89
+Handle =18000000 >> multi_map_reads.size=463 read_len_map.size=8979230 Time-elapsed=90.49
+Handle =20000000 >> multi_map_reads.size=477 read_len_map.size=9397282 Time-elapsed=96.07
+Handle =22000000 >> multi_map_reads.size=575 read_len_map.size=10438419 Time-elapsed=106.71
+Handle =24000000 >> multi_map_reads.size=603 read_len_map.size=12209826 Time-elapsed=120.16
+Handle =26000000 >> multi_map_reads.size=653 read_len_map.size=13514879 Time-elapsed=131.78
+Handle =28000000 >> multi_map_reads.size=723 read_len_map.size=14388471 Time-elapsed=144.49
+Handle =30000000 >> multi_map_reads.size=785 read_len_map.size=14666726 Time-elapsed=148.72
+Handle =32000000 >> multi_map_reads.size=834 read_len_map.size=15260641 Time-elapsed=154.56
+Handle =34000000 >> multi_map_reads.size=967 read_len_map.size=16237367 Time-elapsed=165.04
+Handle =36000000 >> multi_map_reads.size=1131 read_len_map.size=17770376 Time-elapsed=178.64
+Handle =38000000 >> multi_map_reads.size=1162 read_len_map.size=18249767 Time-elapsed=184.95
+Handle =40000000 >> multi_map_reads.size=1188 read_len_map.size=19258838 Time-elapsed=193.08
+Handle =42000000 >> multi_map_reads.size=1267 read_len_map.size=20489262 Time-elapsed=204.64
+Handle =44000000 >> multi_map_reads.size=1291 read_len_map.size=22317917 Time-elapsed=215.75
+Handle =46000000 >> multi_map_reads.size=1343 read_len_map.size=23819436 Time-elapsed=226.77
+Handle =48000000 >> multi_map_reads.size=1468 read_len_map.size=24835471 Time-elapsed=240.8
+Handle =50000000 >> multi_map_reads.size=1488 read_len_map.size=25690186 Time-elapsed=248.55
+Handle =52000000 >> multi_map_reads.size=1520 read_len_map.size=26385192 Time-elapsed=256.69
+Handle =54000000 >> multi_map_reads.size=1536 read_len_map.size=27182360 Time-elapsed=264.53
+Handle =56000000 >> multi_map_reads.size=1561 read_len_map.size=29069392 Time-elapsed=276.37
+Handle =58000000 >> multi_map_reads.size=1607 read_len_map.size=29478785 Time-elapsed=289.53
+Handle =60000000 >> multi_map_reads.size=1734 read_len_map.size=31267513 Time-elapsed=305.24
+Handle =62000000 >> multi_map_reads.size=1775 read_len_map.size=32317381 Time-elapsed=314.75
+Handle =64000000 >> multi_map_reads.size=1798 read_len_map.size=33447211 Time-elapsed=325.36
+Handle =66000000 >> multi_map_reads.size=1835 read_len_map.size=34024560 Time-elapsed=330.79
+Handle =68000000 >> multi_map_reads.size=1898 read_len_map.size=35636844 Time-elapsed=345.45
+Handle =70000000 >> multi_map_reads.size=1937 read_len_map.size=36144484 Time-elapsed=351.76
+Handle =72000000 >> multi_map_reads.size=1995 read_len_map.size=37510439 Time-elapsed=362.8
+Handle =74000000 >> multi_map_reads.size=2085 read_len_map.size=38693940 Time-elapsed=373.92
+Handle =76000000 >> multi_map_reads.size=2134 read_len_map.size=39658081 Time-elapsed=382.61
+Handle =78000000 >> multi_map_reads.size=2180 read_len_map.size=40028973 Time-elapsed=387.72
+Handle =80000000 >> multi_map_reads.size=2240 read_len_map.size=41630360 Time-elapsed=398.77
+Handle =82000000 >> multi_map_reads.size=2280 read_len_map.size=42082357 Time-elapsed=404.61
+Handle =84000000 >> multi_map_reads.size=2348 read_len_map.size=42723156 Time-elapsed=412.87
+Handle =86000000 >> multi_map_reads.size=2374 read_len_map.size=44114095 Time-elapsed=424.65
+Handle =88000000 >> multi_map_reads.size=2393 read_len_map.size=45446017 Time-elapsed=433.59
+Handle =90000000 >> multi_map_reads.size=2418 read_len_map.size=45941714 Time-elapsed=439.25
+Handle =92000000 >> multi_map_reads.size=2485 read_len_map.size=47533516 Time-elapsed=453.51
+Handle =94000000 >> multi_map_reads.size=2502 read_len_map.size=47727074 Time-elapsed=458.42
+Handle =96000000 >> multi_map_reads.size=2520 read_len_map.size=48505616 Time-elapsed=465.22
+Handle =98000000 >> multi_map_reads.size=2528 read_len_map.size=49255740 Time-elapsed=471.59
+Handle =100000000 >> multi_map_reads.size=2528 read_len_map.size=49597854 Time-elapsed=475.78
+Handle =102000000 >> multi_map_reads.size=2579 read_len_map.size=50385926 Time-elapsed=492.51
+Handle =104000000 >> multi_map_reads.size=2585 read_len_map.size=50565305 Time-elapsed=496.15
+Handle =106000000 >> multi_map_reads.size=2591 read_len_map.size=50602114 Time-elapsed=498.98
+Handle =108000000 >> multi_map_reads.size=2613 read_len_map.size=52202036 Time-elapsed=509.6
+Handle =110000000 >> multi_map_reads.size=2648 read_len_map.size=52523517 Time-elapsed=514.66
+Handle =112000000 >> multi_map_reads.size=2662 read_len_map.size=53286390 Time-elapsed=521.53
+Handle =114000000 >> multi_map_reads.size=2727 read_len_map.size=54176719 Time-elapsed=531.22
+Handle =116000000 >> multi_map_reads.size=2762 read_len_map.size=55640655 Time-elapsed=542.91
+Handle =118000000 >> multi_map_reads.size=2814 read_len_map.size=56683885 Time-elapsed=554
+Handle =120000000 >> multi_map_reads.size=2859 read_len_map.size=57666192 Time-elapsed=564.64
+Handle =122000000 >> multi_map_reads.size=2890 read_len_map.size=58165940 Time-elapsed=570.5
+Handle =124000000 >> multi_map_reads.size=2938 read_len_map.size=59319642 Time-elapsed=582.91
+Handle =126000000 >> multi_map_reads.size=2952 read_len_map.size=60677760 Time-elapsed=592.59
+Handle =128000000 >> multi_map_reads.size=2972 read_len_map.size=61778396 Time-elapsed=601.61
+Handle =130000000 >> multi_map_reads.size=3001 read_len_map.size=62646027 Time-elapsed=610.12
+Handle =132000000 >> multi_map_reads.size=3045 read_len_map.size=64035445 Time-elapsed=622.97
+Handle =134000000 >> multi_map_reads.size=3050 read_len_map.size=65360894 Time-elapsed=640.56
+Handle =136000000 >> multi_map_reads.size=3133 read_len_map.size=66456256 Time-elapsed=650.57
+Handle =138000000 >> multi_map_reads.size=3161 read_len_map.size=68208942 Time-elapsed=679.25
+Handle =140000000 >> multi_map_reads.size=3187 read_len_map.size=68775841 Time-elapsed=685.13
+Handle =142000000 >> multi_map_reads.size=3258 read_len_map.size=70169999 Time-elapsed=698.85
+Handle =144000000 >> multi_map_reads.size=3260 read_len_map.size=70300384 Time-elapsed=702.59
+Handle =146000000 >> multi_map_reads.size=3303 read_len_map.size=71491297 Time-elapsed=713.81
+Handle =148000000 >> multi_map_reads.size=3308 read_len_map.size=72687173 Time-elapsed=724.09
+Handle =150000000 >> multi_map_reads.size=3412 read_len_map.size=74058650 Time-elapsed=736.52
+Handle =152000000 >> multi_map_reads.size=3428 read_len_map.size=74292853 Time-elapsed=740.51
+Handle =154000000 >> multi_map_reads.size=3486 read_len_map.size=75219833 Time-elapsed=750.08
+Handle =156000000 >> multi_map_reads.size=3545 read_len_map.size=75884060 Time-elapsed=758.12
+Handle =158000000 >> multi_map_reads.size=3545 read_len_map.size=76086748 Time-elapsed=761.1
+Handle =160000000 >> multi_map_reads.size=3650 read_len_map.size=76938618 Time-elapsed=769.48
+Handle =162000000 >> multi_map_reads.size=3734 read_len_map.size=78354246 Time-elapsed=781.43
+Handle =164000000 >> multi_map_reads.size=3754 read_len_map.size=79183489 Time-elapsed=789.18
+Handle =166000000 >> multi_map_reads.size=3808 read_len_map.size=80479144 Time-elapsed=800.08
+Handle =168000000 >> multi_map_reads.size=3833 read_len_map.size=82228389 Time-elapsed=811.37
+Handle =170000000 >> multi_map_reads.size=3916 read_len_map.size=83327149 Time-elapsed=822.94
+Handle =172000000 >> multi_map_reads.size=3966 read_len_map.size=85090151 Time-elapsed=838.27
+Handle =174000000 >> multi_map_reads.size=3973 read_len_map.size=85762247 Time-elapsed=845.29
+Handle =176000000 >> multi_map_reads.size=4040 read_len_map.size=87208737 Time-elapsed=858.55
+Handle =178000000 >> multi_map_reads.size=4066 read_len_map.size=87517417 Time-elapsed=863.91
+Handle =180000000 >> multi_map_reads.size=4116 read_len_map.size=88264092 Time-elapsed=871.3
+Handle =182000000 >> multi_map_reads.size=4167 read_len_map.size=90151504 Time-elapsed=884.82
+Handle =184000000 >> multi_map_reads.size=4218 read_len_map.size=91533567 Time-elapsed=897.11
+Handle =186000000 >> multi_map_reads.size=4224 read_len_map.size=92503151 Time-elapsed=908.08
+Handle =188000000 >> multi_map_reads.size=4434 read_len_map.size=93709728 Time-elapsed=921.13
+Handle =190000000 >> multi_map_reads.size=4514 read_len_map.size=94726758 Time-elapsed=932.07
+Handle =192000000 >> multi_map_reads.size=4526 read_len_map.size=95354324 Time-elapsed=938.23
+Handle =194000000 >> multi_map_reads.size=4582 read_len_map.size=96458968 Time-elapsed=948.94
+Handle =196000000 >> multi_map_reads.size=4678 read_len_map.size=97869898 Time-elapsed=962.92
+Handle =198000000 >> multi_map_reads.size=4742 read_len_map.size=99543736 Time-elapsed=977.77
+Handle =200000000 >> multi_map_reads.size=4756 read_len_map.size=101512281 Time-elapsed=1011.53
+Handle =202000000 >> multi_map_reads.size=4788 read_len_map.size=102798913 Time-elapsed=1021.96
+Handle =204000000 >> multi_map_reads.size=4814 read_len_map.size=103853245 Time-elapsed=1031.22
+Handle =206000000 >> multi_map_reads.size=4865 read_len_map.size=105053594 Time-elapsed=1043.61
+Handle =208000000 >> multi_map_reads.size=4911 read_len_map.size=106077439 Time-elapsed=1054.54
+Handle =210000000 >> multi_map_reads.size=4963 read_len_map.size=107937238 Time-elapsed=1072.17
+Handle =212000000 >> multi_map_reads.size=5014 read_len_map.size=109783535 Time-elapsed=1089.02
+Handle =214000000 >> multi_map_reads.size=5058 read_len_map.size=110322751 Time-elapsed=1096.34
+Handle =216000000 >> multi_map_reads.size=5085 read_len_map.size=111701474 Time-elapsed=1109.88
+Handle =218000000 >> multi_map_reads.size=5130 read_len_map.size=112806944 Time-elapsed=1119.49
+Handle =220000000 >> multi_map_reads.size=5165 read_len_map.size=113919788 Time-elapsed=1129.08
+Handle =222000000 >> multi_map_reads.size=5263 read_len_map.size=115504727 Time-elapsed=1143.83
+Handle =224000000 >> multi_map_reads.size=5281 read_len_map.size=116786393 Time-elapsed=1159.34
+Handle =226000000 >> multi_map_reads.size=5306 read_len_map.size=117837245 Time-elapsed=1172.37
+Handle =228000000 >> multi_map_reads.size=5347 read_len_map.size=118327654 Time-elapsed=1180.2
+Handle =230000000 >> multi_map_reads.size=5403 read_len_map.size=119926818 Time-elapsed=1199.94
+Handle =232000000 >> multi_map_reads.size=5420 read_len_map.size=121094431 Time-elapsed=1212.56
+Handle =234000000 >> multi_map_reads.size=5433 read_len_map.size=121802446 Time-elapsed=1221.37
+Handle =236000000 >> multi_map_reads.size=5472 read_len_map.size=122631795 Time-elapsed=1232.19
+Handle =238000000 >> multi_map_reads.size=5498 read_len_map.size=123001613 Time-elapsed=1238.72
+Handle =240000000 >> multi_map_reads.size=5506 read_len_map.size=123260338 Time-elapsed=1243.34
+Handle =242000000 >> multi_map_reads.size=5529 read_len_map.size=124378042 Time-elapsed=1254.37
+Handle =244000000 >> multi_map_reads.size=5578 read_len_map.size=125283179 Time-elapsed=1265.18
+Handle =246000000 >> multi_map_reads.size=5590 read_len_map.size=125979407 Time-elapsed=1275.1
+Handle =248000000 >> multi_map_reads.size=5675 read_len_map.size=127577012 Time-elapsed=1292.56
+Handle =250000000 >> multi_map_reads.size=5687 read_len_map.size=127792266 Time-elapsed=1297.59
+Handle =252000000 >> multi_map_reads.size=5721 read_len_map.size=129259444 Time-elapsed=1312.47
+Handle =254000000 >> multi_map_reads.size=5745 read_len_map.size=129660786 Time-elapsed=1318.81
+Handle =256000000 >> multi_map_reads.size=5779 read_len_map.size=129881078 Time-elapsed=1323.82
+Handle =258000000 >> multi_map_reads.size=5862 read_len_map.size=131324713 Time-elapsed=1339.34
+Handle =260000000 >> multi_map_reads.size=5876 read_len_map.size=133277177 Time-elapsed=1351.24
+Handle =262000000 >> multi_map_reads.size=5930 read_len_map.size=134015371 Time-elapsed=1360.72
+Handle =264000000 >> multi_map_reads.size=5969 read_len_map.size=134987178 Time-elapsed=1370.82
+Handle =266000000 >> multi_map_reads.size=6016 read_len_map.size=135777306 Time-elapsed=1380.38
+Handle =268000000 >> multi_map_reads.size=6054 read_len_map.size=136285180 Time-elapsed=1387.04
+Handle =270000000 >> multi_map_reads.size=6094 read_len_map.size=137138941 Time-elapsed=1396.23
+Handle =272000000 >> multi_map_reads.size=6135 read_len_map.size=137613822 Time-elapsed=1404.01
+Handle =274000000 >> multi_map_reads.size=6171 read_len_map.size=139171173 Time-elapsed=1421.33
+Handle =276000000 >> multi_map_reads.size=6180 read_len_map.size=141137020 Time-elapsed=1436.07
+Handle =278000000 >> multi_map_reads.size=6231 read_len_map.size=141915528 Time-elapsed=1446.62
+Handle =280000000 >> multi_map_reads.size=6249 read_len_map.size=143516076 Time-elapsed=1460.1
+Handle =282000000 >> multi_map_reads.size=6327 read_len_map.size=145144255 Time-elapsed=1476.41
+Handle =284000000 >> multi_map_reads.size=6374 read_len_map.size=146805384 Time-elapsed=1492.41
+Handle =286000000 >> multi_map_reads.size=6408 read_len_map.size=147849314 Time-elapsed=1502.03
+Handle =288000000 >> multi_map_reads.size=6491 read_len_map.size=149164046 Time-elapsed=1517.68
+Handle =290000000 >> multi_map_reads.size=6520 read_len_map.size=150786088 Time-elapsed=1530.8
+Handle =292000000 >> multi_map_reads.size=6620 read_len_map.size=151954880 Time-elapsed=1544.8
+Handle =294000000 >> multi_map_reads.size=6700 read_len_map.size=153811762 Time-elapsed=1562.11
+Handle =296000000 >> multi_map_reads.size=6765 read_len_map.size=155595325 Time-elapsed=1580.58
+Handle =298000000 >> multi_map_reads.size=6795 read_len_map.size=157179579 Time-elapsed=1595
+Handle =300000000 >> multi_map_reads.size=6812 read_len_map.size=158084516 Time-elapsed=1605.63
+Handle =302000000 >> multi_map_reads.size=6827 read_len_map.size=158261595 Time-elapsed=1610.22
+Handle =304000000 >> multi_map_reads.size=6840 read_len_map.size=158545147 Time-elapsed=1616.07
+Handle =306000000 >> multi_map_reads.size=6869 read_len_map.size=159297430 Time-elapsed=1624.28
+Handle =308000000 >> multi_map_reads.size=6916 read_len_map.size=160411990 Time-elapsed=1634.83
+Handle =310000000 >> multi_map_reads.size=6959 read_len_map.size=162327295 Time-elapsed=1653.23
+Handle =312000000 >> multi_map_reads.size=7004 read_len_map.size=163532715 Time-elapsed=1664.86
+Handle =314000000 >> multi_map_reads.size=7042 read_len_map.size=164103549 Time-elapsed=1673.19
+Handle =316000000 >> multi_map_reads.size=7079 read_len_map.size=165618676 Time-elapsed=1687.9
+Handle =318000000 >> multi_map_reads.size=7123 read_len_map.size=166470287 Time-elapsed=1697.22
+Handle =320000000 >> multi_map_reads.size=7135 read_len_map.size=168427361 Time-elapsed=1712.42
+Handle =322000000 >> multi_map_reads.size=7211 read_len_map.size=170299957 Time-elapsed=1734.39
+Handle =324000000 >> multi_map_reads.size=7293 read_len_map.size=171720582 Time-elapsed=1749.98
+Handle =326000000 >> multi_map_reads.size=7321 read_len_map.size=172660651 Time-elapsed=1761.26
+Handle =328000000 >> multi_map_reads.size=7389 read_len_map.size=173976816 Time-elapsed=1775.41
+Handle =330000000 >> multi_map_reads.size=7444 read_len_map.size=175550524 Time-elapsed=1790.9
+Handle =332000000 >> multi_map_reads.size=7470 read_len_map.size=177088836 Time-elapsed=1803.5
+Handle =334000000 >> multi_map_reads.size=7507 read_len_map.size=177921969 Time-elapsed=1813.26
+Handle =336000000 >> multi_map_reads.size=7548 read_len_map.size=178865986 Time-elapsed=1825.22
+Handle =338000000 >> multi_map_reads.size=7582 read_len_map.size=179741470 Time-elapsed=1836.07
+Handle =340000000 >> multi_map_reads.size=7606 read_len_map.size=180909010 Time-elapsed=1848.46
+Handle =342000000 >> multi_map_reads.size=7661 read_len_map.size=182842413 Time-elapsed=1865.78
+Handle =344000000 >> multi_map_reads.size=7708 read_len_map.size=184728163 Time-elapsed=1881.99
+Handle =346000000 >> multi_map_reads.size=7773 read_len_map.size=186523873 Time-elapsed=1899.63
+Handle =348000000 >> multi_map_reads.size=7780 read_len_map.size=187918015 Time-elapsed=1914.44
+Handle =350000000 >> multi_map_reads.size=7810 read_len_map.size=189055142 Time-elapsed=1926.29
+Handle =352000000 >> multi_map_reads.size=7860 read_len_map.size=190986998 Time-elapsed=1942.57
+Handle =354000000 >> multi_map_reads.size=7913 read_len_map.size=192237717 Time-elapsed=1956.95
+Handle =356000000 >> multi_map_reads.size=7920 read_len_map.size=192535814 Time-elapsed=1963.32
+Handle =358000000 >> multi_map_reads.size=7920 read_len_map.size=192615957 Time-elapsed=1967.33
+Handle =360000000 >> multi_map_reads.size=7998 read_len_map.size=193546620 Time-elapsed=1979.71
+Handle =362000000 >> multi_map_reads.size=8048 read_len_map.size=194079484 Time-elapsed=1987.25
+Handle =364000000 >> multi_map_reads.size=8069 read_len_map.size=195970079 Time-elapsed=2001.58
+Handle =366000000 >> multi_map_reads.size=8112 read_len_map.size=196694277 Time-elapsed=2010.39
+Handle =368000000 >> multi_map_reads.size=8147 read_len_map.size=197760306 Time-elapsed=2023.08
+Handle =370000000 >> multi_map_reads.size=8235 read_len_map.size=199225334 Time-elapsed=2037.98
+Handle =372000000 >> multi_map_reads.size=8285 read_len_map.size=200026211 Time-elapsed=2047.57
+Handle =374000000 >> multi_map_reads.size=8302 read_len_map.size=200835445 Time-elapsed=2055.6
+Handle =376000000 >> multi_map_reads.size=8354 read_len_map.size=202288061 Time-elapsed=2071.92
+Handle =378000000 >> multi_map_reads.size=8522 read_len_map.size=203538960 Time-elapsed=2134.85
+Handle =380000000 >> multi_map_reads.size=8542 read_len_map.size=203909688 Time-elapsed=2141.39
+Handle =382000000 >> multi_map_reads.size=8552 read_len_map.size=204058009 Time-elapsed=2146.22
+Handle =384000000 >> multi_map_reads.size=8611 read_len_map.size=204602608 Time-elapsed=2154.51
+Handle =386000000 >> multi_map_reads.size=8630 read_len_map.size=205634709 Time-elapsed=2166.5
+Handle =388000000 >> multi_map_reads.size=8669 read_len_map.size=206237845 Time-elapsed=2223.31
+Handle =390000000 >> multi_map_reads.size=8691 read_len_map.size=206933976 Time-elapsed=2230.72
+Handle =392000000 >> multi_map_reads.size=8722 read_len_map.size=208050436 Time-elapsed=2241.77
+Handle =394000000 >> multi_map_reads.size=8733 read_len_map.size=210018012 Time-elapsed=2251.33
+Handle =396000000 >> multi_map_reads.size=8742 read_len_map.size=211987685 Time-elapsed=2261.4
+Handle =398000000 >> multi_map_reads.size=8805 read_len_map.size=213911786 Time-elapsed=2273.25
+Handle =400000000 >> multi_map_reads.size=8933 read_len_map.size=215842681 Time-elapsed=2290.09
+Handle =402000000 >> multi_map_reads.size=8990 read_len_map.size=217724503 Time-elapsed=2305.09
+Handle =404000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2315.24
+Handle =406000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2320.79
+Handle =408000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2328.55
+Handle =410000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2337.06
+Handle =412000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2345.75
+Handle =414000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2354.13
+Handle =416000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2362.39
+Handle =418000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2368.57
+Handle =420000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2374.05
+Handle =422000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2379.53
+Handle =424000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2385.05
+Handle =426000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2390.58
+Handle =428000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2396.07
+Handle =430000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2401.55
+Handle =432000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2406.98
+Handle =434000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2412.4
+Handle =436000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2417.78
+Handle =438000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2423.24
+Handle =440000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2428.28
+Handle =442000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2433.96
+Handle =444000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2442.64
+Handle =446000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2451.85
+Handle =448000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2460.87
+Handle =450000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2470.14
+Handle =452000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2479.29
+Handle =454000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2487.68
+Handle =456000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2493.9
+Handle =458000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2499.92
+Handle =460000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2506.11
+Handle =462000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2512.22
+Handle =464000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2518.23
+Handle =466000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2524.07
+Handle =468000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2529.83
+Handle =470000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2536.2
+Handle =472000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2543.29
+Handle =474000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2550.5
+Handle =476000000 >> multi_map_reads.size=9066 read_len_map.size=219078791 Time-elapsed=2558.72
+Time consumed to read bam: 2560.77s
+For all reads: reads=219078791/291592884(75.13) bases=155852584726/237661543914(65.58) ins=3316046589(1.40) del=5334407359(2.24)
+	 N10: 2090
+	 N20: 1645
+	 N30: 1347
+	 N40: 1115
+	 N50: 973
+	 N60: 843
+	 N70: 734
+	 N80: 657
+	 N90: 516
+For mapped reads: bases=155852584726/209486039086(74.40) ins=3316046589(1.58) del=5334407359(2.55)
+	 N10: 2144
+	 N20: 1715
+	 N30: 1420
+	 N40: 1170
+	 N50: 1032
+	 N60: 899
+	 N70: 771
+	 N80: 701
+	 N90: 607
+
+# reads with multipe mapping = 14165=9065/291592884(0.00)
+Open sam file (/home/user/luzhenhao/HCT116_ONT/FusionSeeker/isoseq.bam).
+Read sam file (/home/user/luzhenhao/HCT116_ONT/FusionSeeker/isoseq.bam) for gene fusion detection.
+Handle =0 _fg_cand.size()=0 Time-elapsed=0.01
+Handle =1000000 _fg_cand.size()=0 Time-elapsed=1.4
+Error!! not equal for de26a954-cb56-4cbd-979b-f4567b9c0813 2==1
