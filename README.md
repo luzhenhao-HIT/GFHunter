@@ -27,7 +27,7 @@
 8. pysam >= 0.23.0
 ```
 ## Installation
-```
+```bash
 #install minimap2
 
 conda create -n GFHunter python=3.8
@@ -37,6 +37,10 @@ conda install bioconda::minimap2
 #install GFHunter
 
 pip install GFHunter
+
+# If you encounter errors while installing `pyabpoa`, try installing an older version first:
+
+pip install pyabpoa==1.5.2
 ```
 ## Usage
 GFHunter offers 2 steps to detect fusions: **index** and **detect**
